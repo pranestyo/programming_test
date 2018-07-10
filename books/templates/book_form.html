@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Programming Test</title>
+	</head>
+
+	<body>
+		<form method="post">
+			{% csrf_token %}
+			<h1>Book</h1>
+	    	 <table>  
+	            <tr> 
+	                <td><label>{{form.title.label}}</label></td><td>{{form.title}}</td>
+	            </tr>
+	            <tr>
+	            	<td><label>{{form.author.label}}</label></td><td>{{form.author}}</td>
+	            </tr>
+	            <tr>
+	            	<td><label>{{form.date_published.label}}</label></td><td>{{form.date_published}}</td>
+	            </tr>
+	            <tr>
+	            	<td><label>{{form.number_of_page.label}}</label></td><td>{{form.number_of_page}}</td>
+	            </tr>
+	            <tr>
+	            	<td><label>{{form.type_of_book.label}}</label></td><td>{{form.type_of_book}}</td>
+	            </tr>
+	         </table>
+	         <br/>
+				<input type="submit" value="Submit" />
+		</form>
+	</body>
+</html>

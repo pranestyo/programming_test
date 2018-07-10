@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    	<title>Programming Test</title>
+    </head>
+    <body>
+    	<h1>Book</h1>
+    	 <table border="1"> 
+                <thead> 
+                    <tr> 
+                        <td>No</td> 
+                        <td>Title</td> 
+                        <td>Author</td>
+                        <td>Date Published</td>
+                        <td>Number of Page</td>
+                        <td>Type of Book</td>
+                        <td>Operation</td>
+                    </tr> 
+                </thead> 
+                <tbody> 
+                        {% for book in object_list %} 
+                        <tr> 
+                            <td>{{ forloop.counter }}</td>
+                            <td>{{ book.title }}</td> 
+                            <td>{{ book.author }}</td> 
+                            <td>{{ book.date_published }}</td>
+                            <td>{{ book.number_of_page }}</td>
+                            <td>{{ book.type_of_book }}</td>
+                            <td><a href="{% url "book_edit" book.id %}">{{ book.title }}</a> | <a href="{% url "book_delete" book.id %}">delete</a></td>
+                        </tr> 
+                        {% endfor %} 
+                </tbody> 
+            </table> 
+            <br \>
+            <a href="{% url "book_new" %}">New Book</a>
+
+    	
+    </body>
+</html>

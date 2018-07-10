@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Programming Test</title>
+	</head>
+
+	<body>
+		<form method="post">
+			{% csrf_token %}
+		    Are you sure you want to delete "{{ object }}" ?
+		    <input type="submit" value="Submit" />
+		</form>
+	</body>
+</html>
